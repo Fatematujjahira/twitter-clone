@@ -1,0 +1,60 @@
+extends ./../layouts/header.pug
+
+
+block title 
+    title= title 
+
+
+block cssLink 
+    link(rel="stylesheet", href="/css/login.css")
+
+block jsScript 
+    script(src="/js/login.js" defer) 
+
+
+
+block bodyContent 
+    .wrapper 
+       .login-wrapper 
+            h1 Register Page
+            form(action="/login", method="post")  
+                div.d-flex 
+                    div.me-2
+                        label(for="firstName")
+                             b First Nmae 
+                        input#firstName(type="text", class="form-control" placeholder="Enter Your First Name" name="firstName" required="")
+                        p.error.firstName-error firstname is required
+
+                    div
+                        label(for="lasttName")
+                             b Last Nmae 
+                        input#lastName(type="text", class="form-control" placeholder="Enter Your Last Name" name="lastName" required="")
+                        p.error.lastName-error last Name is required
+
+
+                label(for="userName")
+                   b userName
+                input#userName(type="text", class="form-control" placeholder="Enter Your user Name" name="userName" required="")
+                p.error.userName-error user Name is required
+
+                label(for="email")
+                   b Email
+                input#email(type="text", class="form-control" placeholder="Enter Your email" name="email" required="")
+                p.error.email-error email is required
+
+                label(for="password")
+                   b password
+                input#password(type="text", class="form-control" placeholder="Enter Your password" name="password") 
+                p.error.password-error password is require
+
+
+                label(for="confirmPassword")
+                   b Confirm Password
+                input#confirmPassword(type="text", class="form-control" placeholder="Enter Your confirm Password" name="confirmPassword") 
+                p.error.confirmPassword-error confirm password is required
+
+
+                input(type="submit",class="form-control",value="register")
+
+            p Already have an account?
+                a(href="/login") Login here 

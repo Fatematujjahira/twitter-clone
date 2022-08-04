@@ -1,0 +1,42 @@
+body{
+    background: rgb(76, 182, 231);
+}
+
+.wrapper{
+    width: 500px;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 25px;
+
+}
+
+
+.login-wrapper{
+    background: white;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+label{
+    display: block;
+    text-align-last: left;
+    margin-top: 20px;
+}
+
+.error{
+    display: none;
+    color: red;
+    margin: 0;
+    text-align-last: left;
+}
+
+input[type="submit"]{
+    margin-top: 20px 0;
+    background: cornflowerblue;
+}
